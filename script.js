@@ -33,14 +33,9 @@ function getRandomSymbol() {
 }
 
 
-// Get users choice if they want those
-let charType = [getRandomLower, getRandomUpper, getRandomNumber, getRandomSymbol];
-//console.log(choosenCharacterTypes[0]()) //use math.random to generate a integer whithin a certin range
-let randomIndex = Math.floor(Math.random() * charType.length);
-//console.log(charType[randomindex]())
-
 //Generate Password function
 function generatePassword() {
+  
   //Prompts
   let passLength = prompt('Choose Password length between 8-128');
   passLength = parseInt(passLength);
@@ -82,6 +77,6 @@ function generatePassword() {
 
     passArray.push(randomFunc()) ;
   }
-  
+
   return passArray.join('') ;
 }
